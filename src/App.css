@@ -1,3 +1,12 @@
+h1{
+  font-size: 5rem;
+  margin-top: 0;
+}
+
+p{
+  font-size: 2.5rem;
+}
+
 ul{
   margin: 0;
   color: white;
@@ -29,14 +38,21 @@ button:hover{
   cursor: pointer;
 }
 
-nav{
+.nav-container{
   background-color: #212529;
-  margin: 0 0 0rem 0;
   width: 100%;
+  height: 78.4px;
   position: fixed;
   display: flex;
+  justify-content: center;
+}
+
+nav{
+  margin: 0 0 0rem 0;
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -52,10 +68,15 @@ nav{
   padding-bottom: 0;
 }
 
+.hidden{
+  visibility:hidden;
+  height: 0;
+}
+
 .nav-content{
   background-color: #212529;
   padding: 0 1rem;
-  width: 80%;
+  width: 100%;
 }
 
 .nav-head> a > img{
@@ -79,8 +100,8 @@ nav{
 
 header{
   color: white;
-  height: 500px;
   width: 100%;
+  height: 95vh;
   background: url('https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg') no-repeat center center;
   background-size: cover;
   margin: 0;
@@ -98,8 +119,75 @@ p{
   margin: 0;
 }
 
-@media (max-width: 720px) {
+@media (min-width: 981px){
+  #nav-content{
+    visibility: visible;
+    width: auto;
+    flex-direction: row;
+  }
+
+  .menu-btn{
+    visibility: hidden;
+  }
+
   .nav-head{
-    max-width: 500px;
+    width: auto;
+  }
+
+  nav{
+    justify-content: space-between;
+  }
+
+  ul{
+    display: flex;
+    align-items: center;
+  }
+
+  li{
+    margin: 25px;
+  }
+  
+  .nav-container{
+    background-color:rgba(0, 0, 0, 0);
+  }
+
+  .nav-head> a > img{
+    height: 2rem;
   }
 }
+
+@media (min-width: 1201px){
+  nav{
+    max-width: 1200px;
+  }
+}
+
+@media(max-width: 1200px){
+  nav{
+    max-width: 980px;
+
+  }
+}
+
+@media (max-width: 980px){
+  .nav-head{
+    max-width: 760px;
+  }
+
+  header{
+    height: 100vh;
+  
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-head{
+    max-width: 550px;
+  }
+
+  header{
+    height: 500px;
+  
+    }
+}
+
