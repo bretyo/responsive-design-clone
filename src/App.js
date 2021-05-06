@@ -26,13 +26,16 @@ class App extends Component {
             <a href='../public/index.html'><img src='https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg' alt='Start Bootsrap' /></a>
             {this.state.menuBtnActive ? <MenuButton toggleNav={this.toggleNav}/> : ''}
           </div>
-          {<ul id='nav-content' className={`nav-content ${!this.state.navShow && 'hidden'}`}>
-            <a><li>SERVICES</li></a>
-            <a><li>PORTFOLIO</li></a>
-            <a><li>ABOUT</li></a>
-            <a><li>TEAM</li></a>
-            <a><li>CONTACT</li></a>
-          </ul>}
+          <div className={`nav-content-container ${!this.state.navShow ? 'hidden' : 'drop-box'}  `}>
+            {<ul id='nav-content' className={`nav-content `}>
+              <a id='li-1'><li>SERVICES</li></a>
+              <a id='li-2'><li>PORTFOLIO</li></a>
+              <a id='li-3'><li>ABOUT</li></a>
+              <a id='li-4'><li>TEAM</li></a>
+              <a id='li-5'><li>CONTACT</li></a>
+            </ul>}
+
+          </div>
         </nav>
       </div>
         <header>
