@@ -97,6 +97,7 @@ nav{
   height: 0;
 }
 
+
 .nav-content{
   background-color: #212529;
   padding: 0 1rem;
@@ -148,6 +149,7 @@ p{
     visibility: visible;
     width: auto;
     flex-direction: row;
+    background: transparent;
   }
 
   .menu-btn{

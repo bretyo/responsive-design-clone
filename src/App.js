@@ -27,7 +27,7 @@ class App extends Component {
             {this.state.menuBtnActive ? <MenuButton toggleNav={this.toggleNav}/> : ''}
           </div>
           {<ul id='nav-content' className={`nav-content ${!this.state.navShow && 'hidden'}`}>
-          <a><li>SERVICES</li></a>
+            <a><li>SERVICES</li></a>
             <a><li>PORTFOLIO</li></a>
             <a><li>ABOUT</li></a>
             <a><li>TEAM</li></a>
